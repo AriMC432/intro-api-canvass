@@ -48,25 +48,52 @@ ctx.fillRect(10, 10, 100, 100);*/
 
   // 5.- Ejemplo de trazo de Arcos
     
-  for (let i = 0; i < 4; i++) {
-      for (let j = 0; j < 3; j++) {
-        ctx.beginPath();
-        const x = 25 + j * 50; // Coordenada x
-        const y = 25 + i * 50; // Coordenada y
-        const radius = 20; // Radio del Arco
-        const startAngle = 0; // Punto inicial del Círculo
-        const endAngle = Math.PI + (Math.PI * j) / 2; // Punto final del Círculo
-        const counterclockwise = i % 2 !== 0; // En el sentido de las agujas del reloj o en sentido contrario
+  //for (let i = 0; i < 4; i++) {
+    //  for (let j = 0; j < 3; j++) {
+        //ctx.beginPath();
+        //const x = 25 + j * 50; // Coordenada x
+        //const y = 25 + i * 50; // Coordenada y
+        //const radius = 20; // Radio del Arco
+        //const startAngle = 0; // Punto inicial del Círculo
+        //const endAngle = Math.PI + (Math.PI * j) / 2; // Punto final del Círculo
+        //const counterclockwise = i % 2 !== 0; // En el sentido de las agujas del reloj o en sentido contrario
 
-        ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
+        //ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 
-        if (i > 1) {
-          ctx.fill();
-        } else {
-          ctx.stroke();
-        }
-      }
-    }
+        //if (i > 1) {
+          //ctx.fill();
+        //} else {
+          //ctx.stroke();
+        //}
+      //}
+    //}
+
+// 6.- Ejemplo de trazo de curva bezier y cuadraticas
+    
+    //Ejemplo de curvas cuadráticas
+    ctx.beginPath();
+    ctx.moveTo(75, 25);
+    ctx.quadraticCurveTo(25, 25, 25, 62.5);
+    ctx.quadraticCurveTo(25, 100, 50, 100);
+    ctx.quadraticCurveTo(50, 120, 30, 125);
+    ctx.quadraticCurveTo(60, 120, 65, 100);
+    ctx.quadraticCurveTo(125, 100, 125, 62.5);
+    ctx.quadraticCurveTo(125, 25, 75, 25);
+    ctx.stroke();
+    
+    ctx.beginPath();
+    ctx.moveTo(75, 40);
+    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+    ctx.fill();
+    
+  
+
+
 
 
 
