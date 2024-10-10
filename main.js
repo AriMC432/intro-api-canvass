@@ -32,18 +32,42 @@ ctx.fillRect(10, 10, 100, 100);*/
 // 4.- Ejemplo de trazo de lineas
  
   // Triángulo relleno
-  ctx.beginPath();
-  ctx.moveTo(25, 25);
-  ctx.lineTo(105, 25);
-  ctx.lineTo(25, 105);
-  ctx.fill();
+  //ctx.beginPath();
+  //ctx.moveTo(25, 25);
+  //ctx.lineTo(105, 25);
+  //ctx.lineTo(25, 105);
+  //ctx.fill();
 
   // Triángulo contorneado
-  ctx.beginPath();
-  ctx.moveTo(125, 125);
-  ctx.lineTo(125, 45);
-  ctx.lineTo(45, 125);
-  ctx.closePath();
-  ctx.stroke();
+  //ctx.beginPath();
+  //ctx.moveTo(125, 125);
+  //ctx.lineTo(125, 45);
+  //ctx.lineTo(45, 125);
+  //ctx.closePath();
+  //ctx.stroke();
+
+  // 5.- Ejemplo de trazo de Arcos
+    
+  for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 3; j++) {
+        ctx.beginPath();
+        const x = 25 + j * 50; // Coordenada x
+        const y = 25 + i * 50; // Coordenada y
+        const radius = 20; // Radio del Arco
+        const startAngle = 0; // Punto inicial del Círculo
+        const endAngle = Math.PI + (Math.PI * j) / 2; // Punto final del Círculo
+        const counterclockwise = i % 2 !== 0; // En el sentido de las agujas del reloj o en sentido contrario
+
+        ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
+
+        if (i > 1) {
+          ctx.fill();
+        } else {
+          ctx.stroke();
+        }
+      }
+    }
+
+
 
 
