@@ -12,11 +12,11 @@ ctx.fillRect(10, 10, 100, 100);*/
     //ctx.strokeRect(50, 50, 50, 50);
 
 // 2.- Ejemplo de trazo de Triangulo
-    ctx.beginPath();
-    ctx.moveTo(75, 50);
-    ctx.lineTo(100, 75);
-    ctx.lineTo(100, 25);
-    ctx.fill();
+    //ctx.beginPath();
+    //ctx.moveTo(75, 50);
+    //ctx.lineTo(100, 75);
+    //ctx.lineTo(100, 25);
+    //ctx.fill();
 
 // 3.- Ejemplo de trazo de pluma
     ctx.beginPath();
