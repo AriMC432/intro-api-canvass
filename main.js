@@ -2,8 +2,8 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 //Ejemplo de trazo
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
+/*ctx.fillStyle = "green";
+ctx.fillRect(10, 10, 100, 100);*/
 
 // 1.-Ejemplo de trazo de Rectangulo
 
@@ -93,7 +93,7 @@ ctx.fillRect(10, 10, 100, 100);
     
 // 7.- Ejemplo de trazo de Combinaciones de líneas y figuras
     
-     /*roundedRect(ctx, 12, 12, 150, 150, 15);
+     roundedRect(ctx, 12, 12, 150, 150, 15);
      roundedRect(ctx, 19, 19, 150, 150, 9);
      roundedRect(ctx, 53, 53, 49, 33, 10);
      roundedRect(ctx, 53, 119, 49, 16, 6);
@@ -164,5 +164,5 @@ ctx.fillRect(10, 10, 100, 100);
    ctx.arcTo(x + width, y, x + width - radius, y, radius);
    ctx.arcTo(x, y, x, y + radius, radius);
    ctx.stroke();
- }*/
+ }
   
